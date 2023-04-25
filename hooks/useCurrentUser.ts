@@ -3,6 +3,7 @@ import useSwr from 'swr'
 import fetcher from '@/libs/fetcher';
 
 const useCurrentUser = () => {
+  //useSwr is a query like in to fetch the user
   const { data, error, isLoading, mutate } = useSwr('/api/current', fetcher);
   return {
     data,
